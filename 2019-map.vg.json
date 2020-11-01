@@ -18,6 +18,7 @@
         "key": "Country",
         "fields": [
           "Score",
+          "Rank",
           "GDP",
           "Social support",
           "Healthy life expectancy",
@@ -38,6 +39,7 @@
     },
     "tooltip": [
       {"field": "properties.name_long", "type": "nominal", "title": "Country"},
+      {"field": "Rank", "type": "quantitative"},
       {"field": "Score", "type": "quantitative"},
       {"field": "GDP", "type": "quantitative", "title": "GDP per capita"},
       {"field": "Social support", "type": "quantitative"},
