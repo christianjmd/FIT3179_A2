@@ -49,7 +49,14 @@
   "encoding": {
     "x": {"field": "GDP", "type": "quantitative", "title": "GDP per capita"},
     "y": {"field": "Score", "type": "quantitative"},
-    "color": {"field": "Continent", "type": "nominal"},
+    "color": {
+      "field": "Continent", 
+      "type": "nominal",
+      "scale": {
+        "domain": ["North America", "South America", "Europe", "Africa", "Asia", "Oceania"],
+        "range":["#1b9e77","#d95f02","#7570b3","#e7298a","#66a61e","#e6ab02"]
+      }
+      },
     "tooltip": [
       {"field": "Country", "type": "nominal"},
       {"field": "Continent", "type": "nominal"},
