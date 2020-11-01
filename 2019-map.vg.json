@@ -35,7 +35,7 @@
     "color": {
       "field": "Score",
       "type": "quantitative",
-      "scale": {"type": "log", "range": ["#e0ecf4", "#e0ecf4", "#8856a7"]}
+      "scale": {"type": "log", "range": ["#edf8fb", "#b3cde3", "#8c96c6", "#88419d"]}
     },
     "tooltip": [
       {"field": "properties.name_long", "type": "nominal", "title": "Country"},
