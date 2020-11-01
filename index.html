@@ -6,13 +6,114 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
     <!-- Import vega-embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <!-- linking to the CSS page -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
+  <title>FIT3179 Assignment 2</title>
+
+  <h1><b>FIT3179 Assignment 2 📕</b></h1>
+
+  <h2>ABOUT 📄</h2>
+  <p>
+    The World Happiness Report is a publication from the Sustainable Development
+    Solutions Network that ranks countries by their happiness levels.
+  </p>
+  <p>
+    Scores from this report are generated from the responses of the citizens of
+    the country. Questions are to be answered on a scale from 1 - 10 based on
+    their experience on 6 factors - economic production, social support, life
+    expectancy, freedom, absence of corruption, and generosity.
+  </p>
+  <p>
+    This visualisation aims to show the changes in happiness of each country
+    over the past 5 years.
+  </p>
+
+  <h2>VISUALISATIONS 📈</h2>
+
   <body>
-    <div id="vis"></div>
+    <div>
+      The visualisation graph below shows the 2019 World Happiness Report where
+      the GDP per Capita (metric that breaks down a country's economic output
+      per person and is calculated by dividing the GDP of a country by its
+      population) is graphed alongside the happiness score that was reached by
+      the country. The graph below indicates there is a positive relationship
+      between the country's GDP per Capita and their Hapiness Score.
+    </div>
+    <div>
+      It's important to note how most European countries are higher in the scale
+      of Happiness Scoring than African countries.
+    </div>
+    <div id="vis6"></div>
+    <div>
+      From the visualisations below, you can see the changes in happiness scores
+      in each country from the past 5 years.
+    </div>
+    <div>
+      Change is not noticeable in the 5 graphs which gives an indication
+    </div>
+
+    <div id="vis2"></div>
+    <div id="vis3"></div>
+    <div id="vis4"></div>
+    <div id="vis5"></div>
 
     <script type="text/javascript">
-      var spec = "https://christianjmd.github.io/FIT3179_A2/2015-map.json";
+      var spec = "https://christianjmd.github.io/FIT3179_A2/2015-map.vg.json";
+      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+
       vegaEmbed("#vis", spec)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var spec2 = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+
+      vegaEmbed("#vis2", spec2)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var spec3 = "https://christianjmd.github.io/FIT3179_A2/2017-map.vg.json";
+      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+
+      vegaEmbed("#vis3", spec3)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var spec4 = "https://christianjmd.github.io/FIT3179_A2/2018-map.vg.json";
+      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+
+      vegaEmbed("#vis4", spec4)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var spec5 = "https://christianjmd.github.io/FIT3179_A2/2019-map.vg.json";
+      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+
+      vegaEmbed("#vis5", spec5)
+        .then(function (result) {
+          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        })
+        .catch(console.error);
+
+      var spec6 =
+        "https://christianjmd.github.io/FIT3179_A2/2019-graph.vg.json";
+      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
+
+      vegaEmbed("#vis6", spec6)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         })
