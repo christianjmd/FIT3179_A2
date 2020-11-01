@@ -7,7 +7,7 @@
     <!-- Import vega-embed -->
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <!-- linking to the CSS page -->
-    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
@@ -17,6 +17,11 @@
   <title>FIT3179 Assignment 2</title>
 
   <h1><b>FIT3179 Assignment 2 📕</b></h1>
+
+  <p>
+    By Christian Dinglasan, Bachelor of Information Technology, Monash
+    University.
+  </p>
 
   <h2>ABOUT 📄</h2>
   <p>
@@ -55,9 +60,13 @@
       in each country from the past 5 years.
     </div>
     <div>
-      Change is not noticeable in the 5 graphs which gives an indication
+      Change is not noticeable in the 5 graphs as it is a short timespan.
+      However, it is seen that countries don't fluctuate too much from what they
+      were previously.
     </div>
-
+    <div id="vis">
+      <p>Top 5</p>
+    </div>
     <div id="vis2"></div>
     <div id="vis3"></div>
     <div id="vis4"></div>
@@ -65,26 +74,16 @@
 
     <script type="text/javascript">
       var spec = "https://christianjmd.github.io/FIT3179_A2/2015-map.vg.json";
-      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-
       vegaEmbed("#vis", spec)
-        .then(function (result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        })
+        .then(function (result) {})
         .catch(console.error);
 
       var spec2 = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-
       vegaEmbed("#vis2", spec2)
-        .then(function (result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        })
+        .then(function (result) {})
         .catch(console.error);
 
       var spec3 = "https://christianjmd.github.io/FIT3179_A2/2017-map.vg.json";
-      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-
       vegaEmbed("#vis3", spec3)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -92,8 +91,6 @@
         .catch(console.error);
 
       var spec4 = "https://christianjmd.github.io/FIT3179_A2/2018-map.vg.json";
-      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-
       vegaEmbed("#vis4", spec4)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -101,8 +98,6 @@
         .catch(console.error);
 
       var spec5 = "https://christianjmd.github.io/FIT3179_A2/2019-map.vg.json";
-      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-
       vegaEmbed("#vis5", spec5)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -111,8 +106,6 @@
 
       var spec6 =
         "https://christianjmd.github.io/FIT3179_A2/2019-graph.vg.json";
-      //   var spec = "https://christianjmd.github.io/FIT3179_A2/2016-map.vg.json";
-
       vegaEmbed("#vis6", spec6)
         .then(function (result) {
           // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
