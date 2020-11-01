@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 800,
+  "height": 500,
+  "title": "2019 World Happiness Report",
+  "data": {
+    "url": "https://raw.githubusercontent.com/christianjmd/A2/main/2019.csv"
+  },
+  "params": [
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "labels": [
+          "Show All",
+          "Africa",
+          "Asia",
+          "Europe",
+          "North America",
+          "Oceania",
+          "South America"
+        ],
+        "name": "Continent: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
+  "selection": {
+    "continent_highlight": {
+      "type": "multi",
+      "fields": ["Continent"],
+      "bind": "legend"
+    }
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {"field": "GDP", "type": "quantitative", "title": "GDP per capita"},
+    "y": {"field": "Score", "type": "quantitative"},
+    "color": {"field": "Continent", "type": "nominal"},
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Continent", "type": "nominal"},
+      {"field": "Rank", "type": "nominal"},
+      {"field": "Score", "type": "quantitative", "format": ","},
+      {"field": "GDP", "type": "quantitative", "format": ","},
+      {"field": "Social support", "type": "quantitative", "format": ","},
+      {
+        "field": "Healthy life expectancy",
+        "type": "quantitative",
+        "format": ","
+      },
+      {
+        "field": "Freedom to make life choices",
+        "type": "quantitative",
+        "format": ","
+      },
+      {"field": "Generosity", "type": "quantitative", "format": ","},
+      {
+        "field": "Perceptions of corruption",
+        "type": "quantitative",
+        "format": ","
+      }
+    ],
+    "opacity": {
+      "condition": {"selection": "continent_highlight", "value": 0.7},
+      "value": 0.1
+    }
+  },
+  "config": {}
+}
