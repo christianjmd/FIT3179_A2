@@ -17,7 +17,7 @@
         },
         "key": "Country or region",
         "fields": [
-          "Overall Rank",
+          "Overall rank",
           "Score",
           "GDP per capita",
           "Social support",
@@ -40,7 +40,7 @@
     },
     "tooltip": [
       {"field": "properties.name_long", "type": "nominal", "title": "Country"},
-      {"field": "Overall Rank", "type": "quantitative"},
+      {"field": "Overall rank", "type": "quantitative", "title": "Rank"},
       {"field": "Score", "type": "quantitative"},
       {"field": "GDP per capita", "type": "quantitative"},
       {"field": "Social support", "type": "quantitative"},
